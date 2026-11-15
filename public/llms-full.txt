@@ -1,0 +1,43 @@
+# Earth1 — Full Reference
+
+Earth1 is a browser-based dotted-map and animated-globe editor built with
+React and Three.js. It runs locally in the browser and requires WebGL 2 for
+the live 3D view.
+
+## Routes
+
+- `/` — interactive editor
+- `/embed` — editor canvas without the surrounding panels
+- `/looks/<id>` — editor with a preset applied
+- `/docs` — usage information
+- `/integrations` — examples for iframe and script-tag embeds
+- `/examples` — example scenes
+- `/privacy` — privacy and analytics information
+
+## Embed and share
+
+The embed route accepts preset and configuration query parameters. For
+example:
+
+```
+/embed?look=halftone
+```
+
+Use the in-app Share action to generate a link that preserves the current
+configuration. `/embed.js` provides a script-tag loader for elements marked
+with `data-earth1`.
+
+The configuration schema is at `/schema/config.json`; the preset schema is
+at `/schema/look-preset.json`.
+
+## Presets
+
+Available preset IDs include `default`, `halftone`, `risograph`, `newsprint`,
+`aurora`, `pixel`, `bayer`, `atkinson`, `wireframe`, `crt`, `glitch`, `badtv`,
+`bloom`, `metal`, `iridescent`, `pencil`, `corrupt`, `toon`, `threshold`,
+`vapor`, and `topographic`.
+
+## Export
+
+The export dialog supports PNG, SVG, WebM, MP4, GIF, and JSON configuration.
+Rendering and exports are performed in the browser.
